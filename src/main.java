@@ -12,15 +12,23 @@
 // Рассчитываете количество бонусных милль, используя
 // значения заведённых переменных. Ответ сохраняете в
 // новую переменную и выводите на экран
-
+/*
 public class main {
     public static void main(String[] args) {
 
-        int ticket = 150;
-        int mili = ticket/20;
+        int price = 150;
+        int miles = price/20;
 
-        System.out.println("Цена билета " + ticket + " рублей");
-        System.out.println("Количество накопленых миль: " + mili);
+        System.out.println("Цена билета " + price + " рублей");
+        System.out.println("Количество накопленых миль: " + miles);
 
+    }
+}*/
+public class Main {
+    public static void main(String[] args) {
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price);
+        System.out.println(miles);
     }
 }
